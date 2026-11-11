@@ -1,0 +1,75 @@
+{
+  "browser": {
+    "allowedOrigins": [
+      "file://",
+      "http://localhost",
+      "http://127.0.0.1",
+      "https://music.163.com",
+      "https://www.bing.com",
+      "https://itunes.apple.com",
+      "https://2000lab.cc",
+      "https://www.2000lab.cc",
+      "https://wukong.support",
+      "https://www.wukong.support",
+      "https://us.ziyelian.site",
+      "https://cn.bing.com",
+      "https://www.bilibili.com",
+      "https://www.autodl.art",
+      "https://www.hworld.com",
+      "https://m.hworld.com",
+      "https://h5.huazhu.com"
+    ],
+    "allowFile": true,
+    "agentAddedOrigins": [
+      "https://us.ziyelian.site",
+      "https://www.hworld.com",
+      "https://m.hworld.com",
+      "https://h5.huazhu.com"
+    ]
+  },
+  "desktop": {
+    "allowedWindowNames": [
+      "Hybrid ACI Desktop Demo",
+      "Notepad",
+      "微信",
+      "WeChat",
+      "Weixin"
+    ],
+    "allowFullScreen": false,
+    "apps": [
+      {
+        "match": "Hybrid ACI Desktop Demo",
+        "tier": "full"
+      }
+    ]
+  },
+  "sensitive": {
+    "requireConfirmation": true,
+    "keywords": [
+      "delete",
+      "remove",
+      "purchase",
+      "buy",
+      "pay",
+      "send",
+      "transfer",
+      "login",
+      "sign in",
+      "password",
+      "credit card",
+      "cvv",
+      "token",
+      "删除",
+      "购买",
+      "支付",
+      "发送",
+      "转账",
+      "登录",
+      "密码",
+      "验证码"
+    ]
+  },
+  "audit": {
+    "path": "artifacts/audit.jsonl"
+  }
+}

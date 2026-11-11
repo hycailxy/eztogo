@@ -1,0 +1,11 @@
+# PowerShell 脚本必须原样保留（UTF-8 BOM + 行尾）：
+# Windows PowerShell 5.1 按 ANSI 读没有 BOM 的 .ps1，中文会乱码、脚本直接语法报错。
+*.ps1 -text
+
+*.md text eol=lf
+*.ts text eol=lf
+*.mjs text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf

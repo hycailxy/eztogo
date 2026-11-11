@@ -1,0 +1,64 @@
+{
+  "name": "eztogo",
+  "version": "0.1.0",
+  "description": "一个 MCP server：Windows 电脑操控（UIA，复刻 Codex Computer Use，带屏幕动画）+ 浏览器操控（ego lite / Edge）",
+  "type": "module",
+  "bin": {
+    "eztogo": "bin/eztogo.mjs"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "desktop/desktop-uia.ps1",
+    "desktop/overlay/codex-cursor.ps1",
+    "desktop/overlay/overlay.ps1",
+    "desktop/overlay/probe-overlay.ps1",
+    "desktop/overlay/sample-screen.ps1",
+    "policy.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node node_modules/typescript/bin/tsc -p tsconfig.json",
+    "prepublishOnly": "node node_modules/typescript/bin/tsc -p tsconfig.json",
+    "mcp": "node dist/src/server.js",
+    "init": "node dist/src/cli.js init",
+    "print-config": "node dist/src/cli.js --print-config",
+    "test:caption": "pwsh -NoProfile -File scripts/caption-check.ps1",
+    "test:caption:e2e": "node tests/cu-caption-e2e.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "computer-use",
+    "computer-control",
+    "windows",
+    "uia",
+    "ui-automation",
+    "browser-automation",
+    "codex"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "ws": "^8.22.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/ws": "^8.18.2",
+    "typescript": "^5.9.3"
+  },
+  "author": "hycailxy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hycailxy/eztogo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hycailxy/eztogo/issues"
+  },
+  "homepage": "https://github.com/hycailxy/eztogo#readme"
+}
